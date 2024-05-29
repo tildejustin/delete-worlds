@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "delete-worlds-hotkey",
   "version": "${version}",
-  "name": "",
-  "description": "",
+  "name": "Delete Worlds Hotkey",
+  "description": "Use the delete button to delete worlds in the world list",
   "authors": [
     "tildejustin"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/modid",
-    "sources": "https://github.com/tildejustin/modid",
-    "issues": "https://github.com/tildejustin/modid/issues"
+    "homepage": "https://modrinth.com/mod/delete-worlds-hotkey",
+    "sources": "https://github.com/tildejustin/delete-worlds-hotkey",
+    "issues": "https://github.com/tildejustin/delete-worlds-hotkey/issues"
   },
   "license": "MIT",
   "environment": "*",
   "mixins": [
-    "modid.mixins.json"
+    "delete-worlds-hotkey.mixins.json"
   ],
   "depends": {
-    "minecraft": "*",
+    "minecraft": ">1.15.2 <1.19",
     "fabricloader": ">=0.15.0"
   }
 }
