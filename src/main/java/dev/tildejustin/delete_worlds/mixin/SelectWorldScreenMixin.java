@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 
 import java.lang.reflect.*;
+import java.util.Optional;
 
 
 @Mixin(SelectWorldScreen.class)
@@ -38,7 +39,7 @@ public abstract class SelectWorldScreenMixin extends Screen {
         System.out.println(this.levelList.getSelected());
         if (original) return true;
         if (keyCode == GLFW.GLFW_KEY_DELETE) {
-            this.levelList.getSelectedAsOptional().ifPresent(this::tryDeleteWorld);
+            Optional.ofNullable(this.levelList.getSelected()).ifPresent(this::tryDeleteWorld);
             if (!this.levelList.children().isEmpty()) {
                 this.levelList.setSelected(this.levelList.children().get(0));
                 this.setFocused(this.levelList);
