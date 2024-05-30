@@ -36,7 +36,6 @@ public abstract class SelectWorldScreenMixin extends Screen {
 
     @ModifyExpressionValue(method = "keyPressed", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/Screen;keyPressed(III)Z", ordinal = 0))
     public boolean keyPressed(boolean original, int keyCode, int scanCode, int modifiers) {
-        System.out.println(this.levelList.getSelected());
         if (original) return true;
         if (keyCode == GLFW.GLFW_KEY_DELETE) {
             Optional.ofNullable(this.levelList.getSelected()).ifPresent(this::tryDeleteWorld);
