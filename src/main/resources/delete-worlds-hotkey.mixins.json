@@ -3,7 +3,8 @@
   "package": "dev.tildejustin.delete_worlds.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "SelectWorldScreenMixin"
+    "SelectWorldScreenMixin",
+    "WorldListWidgetMixin"
   ],
   "injectors": {
     "defaultRequire": 1
